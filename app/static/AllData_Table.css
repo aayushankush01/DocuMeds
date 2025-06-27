@@ -1,0 +1,64 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #fce4ec);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Table layout */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    background-color: #ffffffcc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Table header */
+th {
+    background-color: #b2dfdb;
+    color: #004d40;
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 2px solid #ccc;
+    text-align: left;
+}
+
+/* Table rows */
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    white-space: pre-line;
+}
+
+/* Alternate row color for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

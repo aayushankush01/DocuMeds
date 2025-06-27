@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="../static/Home.css">
+</head>
+<body>
+<h1 class="main-heading">DocuMeds</h1>
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" value="{{name or ''}}">
+    <label for="Sex">Sex</label>
+    <select id="Sex" name="Sex">
+        <option value="">Select Gender</option>
+        <option value="Male" {% if sex =='Male' %}selected{% endif %} >Male</option>
+        <option value="Female" {% if sex =='Female' %}selected{% endif %} >Female</option>
+        <option value="Non-Binary" {% if sex =='Non-Binary' %}selected{% endif %} >Non-Binary</option>
+    </select>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="Age" value="{{age or ''}}" required>
+    {% if error %}
+        <label>Error:</label>
+        <p class="error-message">{{ error }}</p>
+    {% endif %}
+    <label for="His">History:</label>
+    <textarea id="His" name="His">{{his or''}}</textarea>
+    <label for="InMed">Inhouse Medicine:</label>
+    <textarea id="InMed" name="InMed" >{{inhousemed or''}}</textarea>
+    <label for="PresMed">Prescribed Medicine:</label>
+    <textarea id="PresMed" name="PresMed">{{presmed or ''}}</textarea>
+    <label for="Invest">Investigations Asked:</label>
+    <textarea id="Invest" name="Investigations">{{investigations or ''}}</textarea>
+    <button type="submit">Submit</button>
+</form>
+<form action="/search" method="GET">
+    <label for="Search_name">Enter Name to be Searched</label>
+    <input type="text" name="Search_name" id="Search_name">
+    <button type="submit">Search</button>
+</form>
+<form action ="/get" method="GET">
+  <label for="start">Start date:</label>
+  <input type="date" id="start" name="start_date" max="{{now}}" required >
+
+  <label for="end">End date:</label>
+  <input type="date" id="end" name="end_date" max="{{now}}" required>
+  <button type="submit">Submit</button>
+</form>
+<script>
+  document.getElementById("start").addEventListener("change", e => {
+    document.getElementById("end").min = e.target.value;
+  });
+</script>
+</body>
+</html>

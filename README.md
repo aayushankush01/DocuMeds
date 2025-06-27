@@ -143,7 +143,7 @@ Once the app is running at `http://localhost:5000`, you'll be taken to the **hom
 
 ### 📅 Search by Date Range
 ![Search by Date](images/RecordByDate.png)
-![Search by Date Result](images/RecordByDate_Result.png)
+![Search by Date Result](images/RecordBYDate_Result.png)
 
  ## 💻 Tech Stack
 

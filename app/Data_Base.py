@@ -1,7 +1,8 @@
+import os
 from datetime import datetime
 from flask import Flask, render_template, request
 import mysql.connector as m
-mydatabase=m.connect(host="localhost",user="root",password="Aayush",database="projectdb1")
+mydatabase=m.connect(host="localhost",user="root",password=os.getenv("MYSQL_PASSWORD"),database="projectdb1")
 cursor=mydatabase.cursor()
 app=Flask(__name__)
 def table_format(rows):

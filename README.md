@@ -127,11 +127,23 @@ Once the app is running at `http://localhost:5000`, you'll be taken to the **hom
 
 ---
 
-🖼️ Screenshots
+## 🖼️ Screenshots
 
-> _(Screenshots will be added here soon)_
+### ➕ Add New Patient Form
+![Add Record](images/HomePage.png)
+![Data Saved](images/DataSaved.png)
 
 ---
+
+### 🔍 Search by Patient Name
+![Search by Name](images/PatientName.png)
+![Search by Name Result](images/SearchName_Result.png)
+
+---
+
+### 📅 Search by Date Range
+![Search by Date](images/RecordByDate.png)
+![Search by Date Result](images/RecordByDate_Result.png)
 
  ## 💻 Tech Stack
 
